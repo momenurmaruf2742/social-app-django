@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Notification(models.Model):
     NOTIFICATION_TYPES = ((1,'Like'),(2,'Follow'),(3,'Comment'),(4,'Reply'),(5,'Like-Comment'),(6,'Like-Reply'))
 
-    post = models.ForeignKey('home.Post', on_delete=models.CASCADE, related_name='notify_post', blank=True, null=True)
+    post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='notify_post', blank=True, null=True)
     sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='notify_from_user')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='notify_to_user')
     notification_type = models.IntegerField(choices=NOTIFICATION_TYPES)

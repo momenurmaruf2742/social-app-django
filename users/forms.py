@@ -29,7 +29,7 @@ class ProfileUpdateForm(forms.ModelForm):
     image = forms.ImageField(label=('Image'), error_messages = {'invalid':("Image files only")}, widget=forms.FileInput, required=False)
     class Meta:
         model = Profile
-        fields = ['bio','date_of_birth','image',]
+        fields = ['twitter_url','instagram_url','linkedin_url','facebook_url','bio','date_of_birth','image',]
 
 
     """Saving Cropped Image"""

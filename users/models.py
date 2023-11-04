@@ -14,12 +14,12 @@ class Profile(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics',blank=True, null=True)
 
-    
     facebook_url = models.URLField(null=True, blank=True)
     twitter_url = models.URLField(null=True, blank=True)
     instagram_url = models.URLField(null=True, blank=True)
     linkedin_url = models.URLField(null=True, blank=True)
-    
+
+
     def profile_posts(self):
         return self.user.post_set.all()
 
