@@ -108,10 +108,10 @@ DATABASES = {
     'default': {
         'ENGINE': os.getenv('DB_ENGINE'),
         'NAME': os.getenv('DB_NAME'),
-        # 'ENFORCE_SCHEMA': os.getenv('DB_ENFORCE_SCHEMA', default=False, cast=bool),
-        # 'CLIENT': {
-        #     'host': os.getenv('DB_HOST'),
-        # },
+        'ENFORCE_SCHEMA': os.getenv('DB_ENFORCE_SCHEMA'),
+        'CLIENT': {
+            'host': os.getenv('DB_HOST'),
+        },
     }
 }
 

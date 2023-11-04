@@ -8,4 +8,5 @@ router = DefaultRouter()
 router.register(r'notifications', NotificationViewSet)
 urlpatterns = [
     path('', ShowNotifications, name='show-notifications'),
+    path('api/', include(router.urls))
 ]
